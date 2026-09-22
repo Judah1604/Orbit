@@ -1,7 +1,24 @@
+"use client";
+
 import Image from "next/image";
 import "./onboarding.css";
+import { useState } from "react";
 
 function Onboarding() {
+	const [linkInputValue, setLinkInputValue] = useState("");
+	const [links, setLinks] = useState([]);
+
+	const handleKeyDown = (e) => {
+		let value = e.target.value;
+
+		if (value !== "" && e.key === "Enter") {
+			setLinks((prevlinks) => [...prevlinks, value]);
+			setLinkInputValue("");
+		}
+	};
+
+	console.log(links);
+
 	return (
 		<div className="onboarding w-4xl">
 			<Image src={"/logo.png"} alt="Orbit" width={50} height={50}></Image>
@@ -55,7 +72,7 @@ function Onboarding() {
 						/>
 					</div>
 				</div>
-				<div className="form-col">
+				<div className="form-col link-col">
 					<div className="form-group">
 						<label htmlFor="social-links">
 							Social or professional links
@@ -64,7 +81,18 @@ function Onboarding() {
 							type="text"
 							id="social-links"
 							placeholder="Instagram, LinkedIn, Behance, X, etc."
+							value={linkInputValue}
+							onChange={(e) => setLinkInputValue(e.target.value)}
+							onKeyDown={handleKeyDown}
 						/>
+					</div>
+					<div className="links">
+						{links.map((link, index) => (
+							<div className="link" key={index}>
+								<img src="/icons/link.png" alt="link" />
+								{link}
+							</div>
+						))}
 					</div>
 				</div>
 				<div className="form-col section">

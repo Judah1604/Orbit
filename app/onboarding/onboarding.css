@@ -18,6 +18,27 @@
 		margin-bottom: 25px;
 	}
 
+	.links {
+		display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        width: 100%;
+
+        .link {
+            background-color: #2F2F2F;
+            border-radius: 10px;
+            padding: 18px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                width: 20px;
+            }
+        }
+	}
+
 	form {
 		width: 100%;
 		display: flex;
@@ -32,18 +53,23 @@
 			align-items: center;
 			gap: 15px;
 
-            &.section {
+            &.link-col {
                 flex-direction: column;
+                gap: 10px;
             }
 
-            .heading-text {
-                display: flex;
-                flex-direction: column;
-                align-items: start;
-                width: 100%;
-                margin: 0;
-                margin-bottom: 6px;
-            }
+			&.section {
+				flex-direction: column;
+			}
+
+			.heading-text {
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				width: 100%;
+				margin: 0;
+				margin-bottom: 6px;
+			}
 
 			.form-group {
 				display: flex;
