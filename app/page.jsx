@@ -1,5 +1,4 @@
-import Image from "next/image";
-
+import Onboarding from "./onboarding/Onboarding";
 export default function Home() {
-	return <h1>Lets Cook!!!</h1>;
+	return <Onboarding />;
 }

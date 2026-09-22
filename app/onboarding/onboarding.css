@@ -1,0 +1,58 @@
+.onboarding {
+	margin: 50px auto;
+	text-align: center;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	p {
+		font-weight: 300;
+		margin-top: 5px;
+		opacity: 0.4;
+	}
+
+	.heading-text {
+		margin: 10px 0;
+		margin-bottom: 25px;
+	}
+
+	form {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		flex-direction: column;
+
+		.form-col {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 15px;
+
+            &.section {
+                flex-direction: column;
+            }
+
+            .heading-text {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                width: 100%;
+                margin: 0;
+                margin-bottom: 6px;
+            }
+
+			.form-group {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: start;
+				gap: 7px;
+				width: 100%;
+			}
+		}
+	}
+}
