@@ -1,0 +1,76 @@
+.gig-feed {
+	.search {
+		display: flex;
+		justify-content: center;
+		gap: 10px;
+
+		img {
+			width: 22px;
+			height: 22px;
+		}
+
+		.input {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			input {
+				padding: 0;
+				padding-left: 2px;
+				background-color: none;
+			}
+		}
+
+		.filter {
+			background-color: var(--dark);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+			padding: 10px 25px;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+	}
+
+	.gigs {
+		margin-top: 20px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 15px;
+
+		.gig {
+			background-color: var(--dark);
+			padding: 20px;
+			border-radius: 20px;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+
+			.btns {
+				display: flex;
+				gap: 15px;
+			}
+
+			.btn {
+				padding: 11px 0px;
+			}
+
+			p {
+				opacity: 0.3;
+				font-weight: 300;
+			}
+		}
+	}
+
+	.no-gigs {
+		text-align: center;
+		width: 100%;
+		margin-top: 30px;
+
+		p {
+			opacity: 0.3;
+            margin-top: 3px;
+		}
+	}
+}

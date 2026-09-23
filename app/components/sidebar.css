@@ -1,0 +1,54 @@
+.sidebar {
+	background-color: var(--dark);
+	height: 100vh;
+	position: sticky;
+	top: 0;
+	border-right: 1px solid #343434;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: start;
+
+	.top {
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-items: start;
+		gap: 40px;
+        width: 100%;
+	}
+
+    .bottom {
+        display: flex;
+        gap: 15px;
+        justify-content: start;
+        align-items: center;
+    }
+
+	.links {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		width: 100%;
+
+		a {
+			display: flex;
+			gap: 12px;
+			width: 100%;
+			padding: 12px;
+			border-radius: 10px;
+			opacity: 0.3;
+
+			&.active {
+				background-color: #2f2f2f;
+				opacity: 1;
+			}
+
+			img {
+				width: 22px;
+				height: 22px;
+			}
+		}
+	}
+}
