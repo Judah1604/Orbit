@@ -44,13 +44,14 @@
 			padding: 20px;
 			border-radius: 20px;
 			display: flex;
+            justify-content: space-between;
 			flex-direction: column;
 			gap: 20px;
 
-			.btns {
-				display: flex;
-				gap: 15px;
-			}
+            .status {
+                color: var(--yellow);
+                font-weight: 500;
+            }
 
 			.btn {
 				padding: 11px 0px;
@@ -70,7 +71,69 @@
 
 		p {
 			opacity: 0.3;
-            margin-top: 3px;
+			margin-top: 3px;
 		}
+	}
+}
+
+.modal-underlay {
+	backdrop-filter: blur(4px);
+
+	.confirmed {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		img {
+			width: 100px;
+            margin-bottom: 20px;
+		}
+	}
+
+	.btns {
+		display: flex;
+		gap: 10px;
+	}
+
+	.icon {
+		display: flex;
+		justify-content: end;
+
+		img {
+			width: 30px;
+			opacity: 0.4;
+			transition: 0.3s ease;
+			cursor: pointer;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	p {
+		font-weight: 300;
+		opacity: 0.3;
+	}
+
+	.details {
+		display: flex;
+		justify-content: space-between;
+		align-items: end;
+
+		.detail {
+			font-weight: 500;
+
+			span {
+				font-weight: 300;
+				opacity: 0.4;
+			}
+		}
+	}
+
+	.modal-dialog {
+		background-color: var(--dark);
+		border: 1px solid #232323;
+		border-radius: 20px;
+		padding: 40px;
 	}
 }

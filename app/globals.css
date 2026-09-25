@@ -4,6 +4,8 @@
 	--background: #ffffff;
 	--foreground: #171717;
 	--green: #34c759;
+	--yellow: #FFCC00;
+	--red: #FF383C;
 	--dark: #0d0d0d;
 }
 
@@ -77,6 +79,14 @@ button {
 
 		&:hover {
 			background-color: color-mix(in srgb, var(--green) 20%, transparent);
+		}
+	}
+	&.btn-red {
+		background-color: color-mix(in srgb, var(--red) 10%, transparent);
+		color: var(--red);
+
+		&:hover {
+			background-color: color-mix(in srgb, var(--red) 20%, transparent);
 		}
 	}
 }
